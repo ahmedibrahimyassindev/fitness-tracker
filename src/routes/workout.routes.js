@@ -20,3 +20,4 @@ router.patch("/:id", validate(updateWorkoutSchema), workoutController.updateWork
 router.delete("/:id", validate(workoutIdParamSchema), workoutController.deleteWorkout);
 
 export default router;
+

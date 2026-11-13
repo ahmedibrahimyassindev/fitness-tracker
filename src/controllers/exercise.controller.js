@@ -24,3 +24,4 @@ export async function getExerciseDetails(req, res, next) {
     next(error);
   }
 }
+

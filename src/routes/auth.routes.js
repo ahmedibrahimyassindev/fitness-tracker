@@ -23,3 +23,4 @@ router.post("/login", authLimiter, validate(loginSchema), authController.login);
 router.post("/logout", authenticate, authController.logout);
 
 export default router;
+

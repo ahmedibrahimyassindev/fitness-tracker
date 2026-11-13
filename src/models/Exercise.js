@@ -52,3 +52,4 @@ exerciseSchema.index({ muscleGroups: 1 });
 exerciseSchema.index({ name: "text", description: "text" });
 
 export const Exercise = mongoose.model("Exercise", exerciseSchema);
+

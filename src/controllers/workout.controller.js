@@ -62,3 +62,4 @@ export async function deleteWorkout(req, res, next) {
     next(error);
   }
 }
+

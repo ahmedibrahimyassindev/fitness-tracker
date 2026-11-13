@@ -1,4 +1,12 @@
 import mongoose from "mongoose";
+import dns from "node:dns";
+
+// Fix Node.js DNS SRV resolution issue on Windows
+try {
+  dns.setServers(["8.8.8.8", "1.1.1.1"]);
+} catch (e) {
+  // Ignore in environments where setting servers is restricted
+}
 
 let connectionPromise;
 
@@ -30,3 +38,4 @@ export async function disconnectDatabase() {
     connectionPromise = undefined;
   }
 }
+

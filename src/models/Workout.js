@@ -85,3 +85,4 @@ workoutSchema.index({ user: 1, scheduledAt: 1 });
 workoutSchema.index({ user: 1, status: 1 });
 
 export const Workout = mongoose.model("Workout", workoutSchema);
+

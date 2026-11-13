@@ -13,3 +13,4 @@ router.get("/progress", validate(reportProgressQuerySchema), reportController.ge
 router.get("/exercises/:exerciseId", validate(exerciseReportSchema), reportController.getExerciseReport);
 
 export default router;
+

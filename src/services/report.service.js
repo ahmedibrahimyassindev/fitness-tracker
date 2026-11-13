@@ -242,3 +242,4 @@ export async function getExerciseReport(userId, exerciseId, { from, to } = {}) {
     history
   };
 }
+

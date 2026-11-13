@@ -36,3 +36,4 @@ export async function logout(req, res, next) {
     next(error);
   }
 }
+

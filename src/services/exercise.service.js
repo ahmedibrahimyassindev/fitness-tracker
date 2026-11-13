@@ -48,3 +48,4 @@ export async function getExerciseById(id) {
   }
   return exercise;
 }
+

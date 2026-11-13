@@ -39,3 +39,4 @@ export async function getExerciseReport(req, res, next) {
     next(error);
   }
 }
+

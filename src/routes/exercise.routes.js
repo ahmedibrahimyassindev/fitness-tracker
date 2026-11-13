@@ -9,3 +9,4 @@ router.get("/", validate(exerciseQuerySchema), exerciseController.listExercises)
 router.get("/:id", validate(exerciseIdParamSchema), exerciseController.getExerciseDetails);
 
 export default router;
+

@@ -83,3 +83,4 @@ workoutSessionSchema.index({ user: 1, completedAt: -1 });
 workoutSessionSchema.index({ user: 1, startedAt: -1 });
 
 export const WorkoutSession = mongoose.model("WorkoutSession", workoutSessionSchema);
+

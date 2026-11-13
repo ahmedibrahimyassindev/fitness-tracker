@@ -22,3 +22,4 @@ router.patch("/:id/complete", validate(completeSessionSchema), sessionController
 router.delete("/:id", validate(sessionIdParamSchema), sessionController.deleteSession);
 
 export default router;
+

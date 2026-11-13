@@ -93,3 +93,4 @@ describe("Exercises Endpoints", () => {
     });
   });
 });
+

@@ -4,3 +4,4 @@ export function notFound(req, res, next) {
     message: `Resource not found: ${req.method} ${req.originalUrl}`
   });
 }
+

@@ -7,3 +7,4 @@ app.listen(port, () => {
   console.log(`API listening on port ${port}`);
   console.log(`Swagger documentation available at http://localhost:${port}/api-docs`);
 });
+

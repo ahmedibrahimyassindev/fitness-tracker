@@ -17,3 +17,4 @@ export const exerciseIdParamSchema = z.object({
     id: z.string().regex(objectIdRegex, "Invalid exercise ID format")
   })
 });
+

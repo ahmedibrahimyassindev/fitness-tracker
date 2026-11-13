@@ -253,3 +253,4 @@ describe("Workouts Endpoints", () => {
     });
   });
 });
+

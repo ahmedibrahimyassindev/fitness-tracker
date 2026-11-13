@@ -18,3 +18,4 @@ export const exerciseReportSchema = z.object({
     to: z.string().optional()
   }).optional()
 });
+
