@@ -56,11 +56,28 @@ app.use(async (req, res, next) => {
   }
 });
 
-// Health check endpoint
-app.get("/api/health", (req, res) => {
+// Health check endpoint with DB diagnostic
+app.get("/api/health", async (req, res) => {
+  const isDbConfigured = !!process.env.MONGODB_URI;
+  let dbStatus = "disconnected";
+  try {
+    if (isDbConfigured) {
+      await connectToDatabase();
+      dbStatus = "connected";
+    } else {
+      dbStatus = "MONGODB_URI environment variable is missing";
+    }
+  } catch (err) {
+    dbStatus = `connection error: ${err.message}`;
+  }
+
   res.status(200).json({
     success: true,
-    message: "Fitness Workout Tracker API is running"
+    message: "Fitness Workout Tracker API is running",
+    database: {
+      configured: isDbConfigured,
+      status: dbStatus
+    }
   });
 });
 
